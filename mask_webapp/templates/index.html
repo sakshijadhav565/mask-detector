@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real-Time Mask Detection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    .video-box {
+      border: 10px solid #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 255, 200, 0.5);
+      overflow: hidden;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 30px rgba(0, 255, 200, 0.5); }
+      50% { box-shadow: 0 0 60px rgba(0, 255, 200, 0.7); }
+      100% { box-shadow: 0 0 30px rgba(0, 255, 200, 0.5); }
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.95rem;
+      color: #80deea;
+      letter-spacing: 1px;
+    }
+
+    .badge {
+      background-color: #00e5ff;
+      color: #000;
+      padding: 5px 15px;
+      border-radius: 20px;
+      margin-top: 10px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 AI-Powered Mask Detection</h1>
+  <div class="video-box">
+    <img src="/video" width="720" height="540" alt="Live Video Feed">
+  </div>
+  <div class="badge">Status: Live Feed Active 🎥</div>
+  <footer>
+    Built by Sakshi · Powered by Flask + OpenCV + Keras 💻
+  </footer>
+</body>
+</html>
